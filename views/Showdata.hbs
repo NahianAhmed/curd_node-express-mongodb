@@ -1,0 +1,25 @@
+<h1>Your mongo data</h1>
+<table border="2">
+<tr>
+<th>Name</th>
+<th>address</th>
+<th>email</th>
+<th>Action</th>
+
+</tr>
+
+
+{{# each data}}
+<tr>
+<td>{{this.name}}</td>
+<td>{{this.address}}</td>
+<td>{{this.email}}</td>
+<td> <a href="/updatePage/{{this._id}}"> Edit </a> 
+     <a href="/delete/{{this._id}}"> Delete </a>
+
+</td>
+
+</tr>
+{{/each}}
+
+</table>
